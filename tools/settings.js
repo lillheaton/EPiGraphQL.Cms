@@ -7,7 +7,7 @@ const buildNumber = process.env.APPVEYOR_BUILD_NUMBER
 const appVeyorJobId = process.env.APPVEYOR_JOB_ID
 const version = pjson.version
 const revision = buildNumber || moment().format('HHmm')
-const includeRevision = false
+const includeRevision = true
 const versionSuffix = 'preview'
 const assemblyVersion = includeRevision
   ? `${version}.${revision}`
