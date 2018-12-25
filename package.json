@@ -5,6 +5,7 @@
   "repository": "git@github.com:lillheaton/Eols.EPiGraphQL.Core.git",
   "author": "Emil Olsson",
   "license": "MIT",
+  "homepage": "https://github.com/lillheaton/Eols.EPiGraphQL.Cms",
   "scripts": {
     "build:release": "set CONFIGURATION=Release&& babel-node tools/build.js",
     "build:ci": "set CONFIGURATION=Release&& yarn&& babel-node tools/build.js ci",
