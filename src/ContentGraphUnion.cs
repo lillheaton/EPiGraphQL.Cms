@@ -91,10 +91,10 @@ namespace Eols.EPiGraphQL.Cms
             return isTypeOf;
         }
 
-        private void FallbackSetFields(ref ObjectGraphType objectGraph, (PropertyInfo propertyInfo, DisplayAttribute attribute) tuple)
+        private void FallbackSetFields(ref ObjectGraphType objectGraph, (PropertyInfo propertyInfo, string description) tuple)
         {
             var propType = tuple.propertyInfo.PropertyType;
-            var displayAttribute = tuple.attribute;
+            var description = tuple.description;
 
             // Check if it's a Block (IContentData) type
             if (typeof(IContentData).IsAssignableFrom(propType) && propType.HasAttribute<GraphHideAttribute>() == false)
@@ -110,7 +110,7 @@ namespace Eols.EPiGraphQL.Cms
                     new FieldType
                     {
                         Name = tuple.propertyInfo.Name,
-                        Description = displayAttribute.Description,
+                        Description = description,
                         ResolvedType = resolvedBlockGraphType
                     });
             }
