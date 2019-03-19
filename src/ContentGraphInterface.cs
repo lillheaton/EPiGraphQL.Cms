@@ -1,12 +1,12 @@
-﻿using Eols.EPiGraphQL.Core;
-using Eols.EPiGraphQL.Core.Factory;
+﻿using EPiGraphQL.Core;
+using EPiGraphQL.Core.Factory;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.ServiceLocation;
 using GraphQL.Types;
 
-namespace Eols.EPiGraphQL.Cms
+namespace EPiGraphQL.Cms
 {
     [ServiceConfiguration(typeof(IInterfaceGraphType), Lifecycle = ServiceInstanceScope.Singleton)]    
     public class ContentGraphInterface : InterfaceGraphType<IContent>

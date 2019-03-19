@@ -1,7 +1,7 @@
-﻿using Eols.EPiGraphQL.Core;
-using Eols.EPiGraphQL.Core.Attributes;
-using Eols.EPiGraphQL.Core.Factory;
-using Eols.EPiGraphQL.Core.Loader;
+﻿using EPiGraphQL.Core;
+using EPiGraphQL.Core.Attributes;
+using EPiGraphQL.Core.Factory;
+using EPiGraphQL.Core.Loader;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
@@ -13,7 +13,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace Eols.EPiGraphQL.Cms
+namespace EPiGraphQL.Cms
 {
     [ServiceConfiguration(typeof(IEPiServerGraphUnion), Lifecycle = ServiceInstanceScope.Singleton)]
     public class ContentGraphUnion : UnionGraphType, IEPiServerGraphUnion

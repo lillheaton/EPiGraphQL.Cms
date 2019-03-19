@@ -3,7 +3,7 @@ using EPiServer.ServiceLocation;
 using GraphQL.Types;
 using System.Linq;
 
-namespace Eols.EPiGraphQL.Cms
+namespace EPiGraphQL.Cms
 {
     [ServiceConfiguration(typeof(IInterfaceGraphType), Lifecycle = ServiceInstanceScope.Singleton)]
     public class LocalizableGraphInterface : InterfaceGraphType<ILocalizable>

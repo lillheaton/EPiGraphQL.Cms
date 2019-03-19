@@ -1,8 +1,8 @@
 using System;
 using System.Reflection;
-[assembly: AssemblyDescription("Eols.EPiGraphQL.Cms an EPiServer tool")]
-[assembly: AssemblyTitle("Eols.EPiGraphQL.Cms")]
-[assembly: AssemblyProduct("Eols.EPiGraphQL.Cms")]
+[assembly: AssemblyDescription("EPiGraphQL.Cms an EPiServer tool")]
+[assembly: AssemblyTitle("EPiGraphQL.Cms")]
+[assembly: AssemblyProduct("EPiGraphQL.Cms")]
 [assembly: AssemblyCopyright("Copyright 2018 Emil Olsson")]
 [assembly: AssemblyTrademark("8cf802216785f0ea9aee82a2ea5fc409c0455e78")]
 [assembly: AssemblyVersion("0.6.0.1346")]

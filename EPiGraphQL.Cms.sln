@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eols.EPiGraphQL.Cms", "src\Eols.EPiGraphQL.Cms.csproj", "{DBE35A4E-99B0-4C12-BB1B-246190ED209B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPiGraphQL.Cms", "src\EPiGraphQL.Cms.csproj", "{DBE35A4E-99B0-4C12-BB1B-246190ED209B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
