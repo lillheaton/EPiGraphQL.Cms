@@ -26,26 +26,35 @@ namespace EPiGraphQL.Cms
                 arguments: new QueryArguments(
                     new QueryArgument<IntGraphType>()
                     {
-                        Name = "id",
-                        DefaultValue = SiteDefinition.Current.StartPage.ID
+                        Name = Constants.Arguments.ARGUMENT_ID,
+                        Description = "Default to Current site StartPage"                        
                     },
                     new QueryArgument<StringGraphType>()
                     {
-                        Name = "locale",
+                        Name = Constants.Arguments.ARGUMENT_LOCALE,
                         DefaultValue = Constants.Value.DefaultLocale
+                    },
+                    new QueryArgument<BooleanGraphType>()
+                    {
+                        Name = Constants.Arguments.ARGUMENT_ALLOWFALLBACK_LANG,
+                        Description = "Allow Fallback Language",
+                        DefaultValue = true
                     }
                 ),
                 resolve: context =>
                 {
-                    int id = context.GetArgument<int>("id");
+                    int id = context.HasArgument(Constants.Arguments.ARGUMENT_ID)
+                        ? context.GetArgument<int>(Constants.Arguments.ARGUMENT_ID) 
+                        : SiteDefinition.Current.StartPage.ID; 
+
                     var locale = context.GetLocaleFromArgument();
 
-                    context.Variables.Add(new Variable { Name = "locale", Value = locale.Name });
-
+                    context.Variables.Add(new Variable { Name = Constants.Arguments.ARGUMENT_LOCALE, Value = locale.Name });
+                    
                     if (_contentLoader
-                        .TryGet<IContent>(
+                        .TryGet(
                             new ContentReference(id),
-                            locale,
+                            context.CreateLoaderOptionsFromAgruments(),
                             out IContent result))
                     {
                         return result;

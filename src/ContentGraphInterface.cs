@@ -28,12 +28,12 @@ namespace EPiGraphQL.Cms
                     new QueryArgument<BooleanGraphType>
                     {
                         DefaultValue = false,
-                        Name = "absoluteUrl"
+                        Name = Constants.Arguments.ARGUMENT_ABSOLUTE_URL
                     },
                     new QueryArgument<StringGraphType>
                     {
                         DefaultValue = Constants.Value.DefaultLocale,
-                        Name = "locale"
+                        Name = Constants.Arguments.ARGUMENT_LOCALE
                     }
                 ),
                 resolve: x =>
@@ -41,14 +41,14 @@ namespace EPiGraphQL.Cms
                     var locale = x.GetLocaleFromArgument();
 
                     return x.Source.ContentLink.GetUrl(
-                        locale.Name, x.GetArgument<bool>("absoluteUrl")
+                        locale.Name, x.GetArgument<bool>(Constants.Arguments.ARGUMENT_ABSOLUTE_URL)
                     );
                 });
             
             Connection<ContentGraphInterface>()
                 .Name("Children")
                 .PageSize(10)
-                .Argument<BooleanGraphType, bool>("allowFallbackLanguage", "Allow Fallback Language", true)
+                .Argument<BooleanGraphType, bool>(Constants.Arguments.ARGUMENT_ALLOWFALLBACK_LANG, "Allow Fallback Language", true)
                 .Resolve(context =>
                 {
                     var loaderOptions = context.CreateLoaderOptionsFromAgruments();
