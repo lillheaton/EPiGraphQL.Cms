@@ -5,6 +5,8 @@
     <Description>GraphQL for EPiServer</Description>
     <Authors>Emil Olsson</Authors>
     <PackageTags>EPiServer;GraphQL;json;api</PackageTags>
+    <PackageProjectUrl>https://github.com/lillheaton/Graphify.EPiServer.Cms</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/lillheaton/Graphify.EPiServer.Cms/blob/master/License.md</PackageLicenseUrl>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
