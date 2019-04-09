@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="GraphQL" Version="2.0.0" />
-    <PackageReference Include="EPiGraphQL.Core" Version="0.7.0" />
+    <PackageReference Include="Graphify.EPiServer.Core" Version="0.7.0" />
   </ItemGroup>
 
 </Project>

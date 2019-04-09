@@ -12,8 +12,8 @@ export default function setVersion(version) {
     )
     .then(
       updateFile(
-        'Updating EPiGraphQL.Core.csproj version',
-        './EPiGraphQL.Core/EPiGraphQL.Core.csproj',
+        'Updating Graphify.EPiServer.Core.csproj version',
+        './Graphify.EPiServer.Core/Graphify.EPiServer.Core.csproj',
         data =>
           data.replace(
             /<VersionPrefix>(.*)<\/VersionPrefix>/,

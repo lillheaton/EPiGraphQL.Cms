@@ -1,4 +1,4 @@
-﻿using EPiGraphQL.Core;
+﻿using Graphify.EPiServer.Core;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.ServiceLocation;
@@ -7,7 +7,7 @@ using GraphQL;
 using GraphQL.Language.AST;
 using GraphQL.Types;
 
-namespace EPiGraphQL.Cms
+namespace Graphify.EPiServer.Cms
 {
     [ServiceConfiguration(typeof(IEPiServerGraph), Lifecycle = ServiceInstanceScope.Singleton)]
     public class ContentGraph : ObjectGraphType, IEPiServerGraph

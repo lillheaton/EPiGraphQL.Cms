@@ -15,13 +15,13 @@ const assemblyVersion = includeRevision
 const CI = process.env.CI && process.env.CI.toString().toLowerCase() === 'true'
 
 const artifactsPath = path.resolve('./artifacts')
-const solutionPath = path.resolve('./EPiGraphQL.Cms.sln')
+const solutionPath = path.resolve('./Graphify.EPiServer.Cms.sln')
 const projectSourcePath = path.resolve('./src')
 const cleanPaths = [`${projectSourcePath}/obj`, `${projectSourcePath}/bin`]
 
 const versionInfo = {
-  description: 'EPiGraphQL.Cms an EPiServer tool',
-  productName: 'EPiGraphQL.Cms',
+  description: 'Graphify.EPiServer.Cms an EPiServer tool',
+  productName: 'Graphify.EPiServer.Cms',
   copyright: 'Copyright 2018 Emil Olsson',
   version: assemblyVersion,
   fileVersion: assemblyVersion,
