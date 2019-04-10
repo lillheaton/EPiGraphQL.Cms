@@ -1,6 +1,6 @@
 {
   "name": "Graphify.EPiServer.Cms",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "main": "index.js",
   "repository": "git@github.com:lillheaton/Graphify.EPiServer.Cms.git",
   "author": "Emil Olsson",
