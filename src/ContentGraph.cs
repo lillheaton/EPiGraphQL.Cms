@@ -1,8 +1,9 @@
-﻿using Graphify.EPiServer.Core;
-using EPiServer;
+﻿using EPiServer;
 using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
+using Graphify.EPiServer.Core;
+using Graphify.EPiServer.Core.Filters;
 using GraphQL;
 using GraphQL.Language.AST;
 using GraphQL.Types;
@@ -57,13 +58,14 @@ namespace Graphify.EPiServer.Cms
                             context.CreateLoaderOptionsFromAgruments(),
                             out IContent result))
                     {
-                        return result;
+                        if (!GraphTypeFilter.ShouldFilter(result))
+                        {
+                            return result;
+                        }
                     }
-                    else
-                    {
-                        context.Errors.Add(new ExecutionError($"Could not find content with id {id}"));
-                        return null;
-                    }
+                    
+                    context.Errors.Add(new ExecutionError($"Could not find content with id {id}"));
+                    return null;                    
                 }
             );
         }
